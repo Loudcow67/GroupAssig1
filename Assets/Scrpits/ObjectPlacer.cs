@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Windows.Input;
 using UnityEditor.Experimental.SceneManagement;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class ObjectPlacer : MonoBehaviour
@@ -13,7 +15,7 @@ public class ObjectPlacer : MonoBehaviour
     void Start()
     {
         c = GetComponent<Camera>();
-        if (prefabs.Length == 0) 
+        if (prefabs.Length == 0)
         {
             Debug.LogError("You haven't selected a Prefab");
         }
@@ -66,6 +68,6 @@ public class ObjectPlacer : MonoBehaviour
     {
         var finalPosition = clickPoint;
         GameObject gameObject = Instantiate(prefabs[chosenPrefab]);
-        gameObject.transform.position = finalPosition + new Vector3(0f ,1.5f ,0f);
+        gameObject.transform.position = finalPosition + new Vector3(0f, 1.5f, 0f);
     }
 }
