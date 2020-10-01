@@ -9,7 +9,6 @@ public class ObjectPlacer : MonoBehaviour
 
     Camera c;
     int chosenPrefab = 0;
-    int rayDistance = 300;
 
     void Start()
     {
