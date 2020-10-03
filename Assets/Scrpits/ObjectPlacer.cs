@@ -7,37 +7,8 @@ using UnityEngine;
 
 public class ObjectPlacer : MonoBehaviour
 {
-    public GameObject[] prefabs;
-
-    Camera c;
-    int chosenPrefab = 0;
-
-    void Start()
-    {
-        c = GetComponent<Camera>();
-        if (prefabs.Length == 0)
-        {
-            Debug.LogError("You haven't selected a Prefab");
-        }
-    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            chosenPrefab++;
-            if (chosenPrefab >= prefabs.Length)
-            {
-                chosenPrefab = 0;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            chosenPrefab--;
-            if (chosenPrefab < 0)
-            {
-                chosenPrefab = prefabs.Length - 1;
-            }
-        }
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hitInfo = new RaycastHit();
@@ -66,8 +37,10 @@ public class ObjectPlacer : MonoBehaviour
 
     private void PlaceObject(Vector3 clickPoint)
     {
+        PrefabFactory prefabFactory = GetComponent<PrefabFactory>();
+
         var finalPosition = clickPoint;
-        GameObject gameObject = Instantiate(prefabs[chosenPrefab]);
+        GameObject gameObject = Instantiate(prefabFactory.prefabs[prefabFactory.chosenPrefab]);
         gameObject.transform.position = finalPosition + new Vector3(0f, 1.5f, 0f);
     }
 }
