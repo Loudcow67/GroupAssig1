@@ -68,6 +68,9 @@
     <Compile Include="Assets\Scrpits\ObjectPlacer.cs" />
     <Compile Include="Assets\Scrpits\PlayerController.cs" />
     <Compile Include="Assets\Scrpits\PrefabFactory.cs" />
+    <Compile Include="Assets\Scrpits\SaveableObject.cs" />
+    <Compile Include="Assets\Scrpits\SaveGameManager.cs" />
+    <Compile Include="Assets\Scrpits\SpecificObject.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Logan/Documents/GitHub/GroupAssig1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
