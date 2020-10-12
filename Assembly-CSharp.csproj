@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scrpits\DLLManager.cs" />
     <Compile Include="Assets\Scrpits\MouseLook.cs" />
     <Compile Include="Assets\Scrpits\ObjectPlacer.cs" />
     <Compile Include="Assets\Scrpits\PlayerController.cs" />
