@@ -1,0 +1,12 @@
+﻿  FileManager.cpp
+C:\Users\Logan\Documents\School Work\3110UGroupAssig1Part2\3110UGroupAssig1Part2\FileManager.h(41,21): warning C4251: 'FileManager::write': class 'std::basic_ofstream<char,std::char_traits<char>>' needs to have dll-interface to be used by clients of class 'FileManager'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\iosfwd(225): message : see declaration of 'std::basic_ofstream<char,std::char_traits<char>>'
+C:\Users\Logan\Documents\School Work\3110UGroupAssig1Part2\3110UGroupAssig1Part2\FileManager.h(42,20): warning C4251: 'FileManager::read': class 'std::basic_ifstream<char,std::char_traits<char>>' needs to have dll-interface to be used by clients of class 'FileManager'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\iosfwd(224): message : see declaration of 'std::basic_ifstream<char,std::char_traits<char>>'
+  Wrapper.cpp
+C:\Users\Logan\Documents\School Work\3110UGroupAssig1Part2\3110UGroupAssig1Part2\FileManager.h(41,21): warning C4251: 'FileManager::write': class 'std::basic_ofstream<char,std::char_traits<char>>' needs to have dll-interface to be used by clients of class 'FileManager'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\iosfwd(225): message : see declaration of 'std::basic_ofstream<char,std::char_traits<char>>'
+C:\Users\Logan\Documents\School Work\3110UGroupAssig1Part2\3110UGroupAssig1Part2\FileManager.h(42,20): warning C4251: 'FileManager::read': class 'std::basic_ifstream<char,std::char_traits<char>>' needs to have dll-interface to be used by clients of class 'FileManager'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\iosfwd(224): message : see declaration of 'std::basic_ifstream<char,std::char_traits<char>>'
+  Generating Code...
+  3110UGroupAssig1Part2.vcxproj -> C:\Users\Logan\Documents\School Work\3110UGroupAssig1Part2\x64\Debug\3110UGroupAssig1Part2.dll
