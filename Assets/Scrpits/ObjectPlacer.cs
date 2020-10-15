@@ -18,20 +18,6 @@ public class ObjectPlacer : MonoBehaviour
                 if (hitInfo.collider.gameObject.tag == "BuildSquare" || hitInfo.collider.gameObject.tag == "Prefab")
                 {
                     GetComponent<PrefabFactory>().PlaceObject(hitInfo.point);
-                    ICommand command = new PlaceObjectCommand(hitInfo.point);
-                    CommandInvoker.AddCommand(command);
-                }
-            }
-        }
-        else if (Input.GetMouseButtonDown(1))
-        {
-            RaycastHit hit = new RaycastHit();
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.collider.gameObject.tag == "Prefab")
-                {
-                    Destroy(hit.collider.gameObject);
                 }
             }
         }

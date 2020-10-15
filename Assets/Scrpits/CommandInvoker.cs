@@ -39,6 +39,7 @@ public class CommandInvoker : MonoBehaviour
 
             commandHis.Add(x);
             counter++;
+            Debug.Log("Length: " + commandHis.Count);
         }
         else
         {

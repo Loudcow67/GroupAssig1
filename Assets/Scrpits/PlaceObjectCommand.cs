@@ -5,22 +5,21 @@ using UnityEngine;
 public class PlaceObjectCommand : ICommand
 {
     Vector3 position;
+    Transform transform;
 
-
-    public PlaceObjectCommand(Vector3 position)
+    public PlaceObjectCommand(Vector3 position, Transform transform)
     {
         this.position = position;
+        this.transform = transform;
     }
 
     public void Execute()
     {
-        PrefabFactory prefabFactory = new PrefabFactory();
-        prefabFactory.PlaceObject(position);
+        CubePlacer.placeShape(position, transform);
     }
 
     public void Undo()
     {
-        PrefabFactory prefabFactory = new PrefabFactory();
-        prefabFactory.removeObject(position);
+        CubePlacer.removeObject(position);
     }
 }

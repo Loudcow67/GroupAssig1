@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 75984505}
   - component: {fileID: 75984504}
   - component: {fileID: 75984508}
+  - component: {fileID: 75984509}
   m_Layer: 8
   m_Name: Ground
   m_TagString: BuildSquare
@@ -307,6 +308,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &75984509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75984503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f85f6fb1b5bfc48a3d54c29546f997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cube: {fileID: 2134673787163033774, guid: 38f3c40407ed37b48b84d41739666cdf, type: 3}
 --- !u!1 &132083509
 GameObject:
   m_ObjectHideFlags: 0
