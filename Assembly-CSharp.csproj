@@ -63,9 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scrpits\CommandInvoker.cs" />
     <Compile Include="Assets\Scrpits\DLLManager.cs" />
+    <Compile Include="Assets\Scrpits\ICommand.cs" />
     <Compile Include="Assets\Scrpits\MouseLook.cs" />
     <Compile Include="Assets\Scrpits\ObjectPlacer.cs" />
+    <Compile Include="Assets\Scrpits\PlaceObjectCommand.cs" />
     <Compile Include="Assets\Scrpits\PlayerController.cs" />
     <Compile Include="Assets\Scrpits\PrefabFactory.cs" />
     <Compile Include="Assets\Scrpits\SaveableObject.cs" />

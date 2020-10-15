@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PrefabFactory : MonoBehaviour
@@ -34,6 +35,34 @@ public class PrefabFactory : MonoBehaviour
             if (chosenPrefab < 0)
             {
                 chosenPrefab = prefabs.Length - 1;
+            }
+        }
+    }
+
+    List<GameObject> objects;
+
+    public void PlaceObject(Vector3 clickPoint)
+    {
+        //PrefabFactory prefabFactory = GetComponent<PrefabFactory>();
+        var finalPosition = clickPoint;
+        GameObject gameObject = Instantiate(prefabs[chosenPrefab]);
+        gameObject.transform.position = finalPosition + new Vector3(0f, 1.5f, 0f);
+
+        if (objects == null)
+        {
+            objects = new List<GameObject>();
+        }
+        objects.Add(gameObject);
+    }
+
+    public void removeObject(Vector3 position)
+    {
+        for (int i = 0; i < objects.Count; i++)
+        {
+            if (objects[i].transform.position == position)
+            {
+                GameObject.Destroy(objects[i].gameObject);
+                objects.RemoveAt(i);
             }
         }
     }

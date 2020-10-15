@@ -17,7 +17,9 @@ public class ObjectPlacer : MonoBehaviour
             {
                 if (hitInfo.collider.gameObject.tag == "BuildSquare" || hitInfo.collider.gameObject.tag == "Prefab")
                 {
-                    PlaceObject(hitInfo.point);
+                    GetComponent<PrefabFactory>().PlaceObject(hitInfo.point);
+                    ICommand command = new PlaceObjectCommand(hitInfo.point);
+                    CommandInvoker.AddCommand(command);
                 }
             }
         }
@@ -35,12 +37,12 @@ public class ObjectPlacer : MonoBehaviour
         }
     }
 
-    private void PlaceObject(Vector3 clickPoint)
-    {
-        PrefabFactory prefabFactory = GetComponent<PrefabFactory>();
-
-        var finalPosition = clickPoint;
-        GameObject gameObject = Instantiate(prefabFactory.prefabs[prefabFactory.chosenPrefab]);
-        gameObject.transform.position = finalPosition + new Vector3(0f, 1.5f, 0f);
-    }
+    //public void PlaceObject(Vector3 clickPoint)
+    //{
+    //    PrefabFactory prefabFactory = GetComponent<PrefabFactory>();
+    //
+    //    var finalPosition = clickPoint;
+    //    GameObject gameObject = Instantiate(prefabFactory.prefabs[prefabFactory.chosenPrefab]);
+    //    gameObject.transform.position = finalPosition + new Vector3(0f, 1.5f, 0f);
+    //}
 }
