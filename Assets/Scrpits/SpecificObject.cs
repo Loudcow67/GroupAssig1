@@ -12,10 +12,4 @@ public class SpecificObject : SaveableObject
     {
         base.Load(values);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

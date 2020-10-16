@@ -27,9 +27,4 @@ public abstract class SaveableObject : MonoBehaviour
     {
         transform.localPosition = SaveGameManager.Instance.StringToVector(values[1]);
     }
-
-    public void DestroySaveable()
-    {
-
-    }
 }
